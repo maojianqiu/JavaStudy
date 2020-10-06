@@ -13,6 +13,7 @@
         <module>dubbo_api</module>
         <module>user-service-provider</module>
         <module>order-service-consumer</module>
+        <module>order02</module>
     </modules>
 
 

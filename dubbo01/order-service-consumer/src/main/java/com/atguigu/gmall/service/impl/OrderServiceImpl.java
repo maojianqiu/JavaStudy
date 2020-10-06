@@ -1,5 +1,6 @@
 package com.atguigu.gmall.service.impl;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	UserService userService;
+
 	@Override
 	public List<UserAddress> initOrder(String userId) {
 		// TODO Auto-generated method stub
@@ -31,6 +33,11 @@ public class OrderServiceImpl implements OrderService {
 		List<UserAddress> addressList = userService.getUserAddressList(userId);
 		for (UserAddress userAddress : addressList) {
 			System.out.println(userAddress.getUserAddress());
+		}
+		try {
+			System.in.read();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		return addressList;
 	}

@@ -16,7 +16,7 @@ public class MainApplication {
 		
 		orderService.initOrder("1");
 		System.out.println("order-server================调用完成....");
-		System.in.read();
+
 	}
 
 }
